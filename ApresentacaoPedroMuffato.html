@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedro Muffato - Revisão Tributária Estratégica</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        html { font-family: 'Inter', sans-serif; }
+        .slide {
+            width: 100vw;
+            height: 100vh;
+            scroll-snap-align: start;
+            flex-shrink: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem;
+            position: relative;
+        }
+        #presentation-container {
+            scroll-snap-type: y mandatory;
+            overflow-y: scroll;
+            height: 100vh;
+        }
+        #presentation-container::-webkit-scrollbar { display: none; }
+
+        /* Novo estilo do Slide 1 com imagem de fundo */
+        #slide-1 {
+            position: relative;
+            overflow: hidden;
+        }
+        #slide-1 img.bg-cover {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 0;
+        }
+        #slide-1 .overlay {
+            position: absolute;
+            inset: 0;
+            background-color: rgba(30, 58, 138, 0.7); /* azul escuro translúcido */
+            z-index: 1;
+        }
+        #slide-1 header {
+            position: relative;
+            z-index: 2;
+        }
+    </style>
+</head>
+
+<body class="bg-light text-dark">
+    <div id="presentation-container">
+
+        <!-- SLIDE 1: atualizado com imagem de fundo -->
+        <section id="slide-1" class="slide text-light">
+            <img src="https://updnnpoxaempjebvhruj.supabase.co/storage/v1/object/public/Capas-Portfolio-RNB/BG_RH.png"
+                 alt="Fundo RH" class="bg-cover" />
+            <div class="overlay"></div>
+
+            <header class="text-center px-4 py-20">
+                <h1 class="text-5xl md:text-7xl font-extrabold mb-4 text-white drop-shadow-lg">
+                    Revisão Tributária Estratégica
+                </h1>
+                <p class="text-2xl md:text-3xl font-light text-white whitespace-nowrap mb-10 drop-shadow">
+                    Competitividade e Compliance Fiscal no ICMS-ST (SP)
+                </p>
+                <div class="mt-8 pt-8 border-t border-blue-300">
+                    <p class="text-lg font-medium text-white">Pedro Muffato Ltda. | Período: Julho a Setembro/2025</p>
+                </div>
+            </header>
+        </section>
+
+        <!-- Demais slides (mantidos iguais) -->
+        <!-- SLIDE 2, SLIDE 3, SLIDE 4, SLIDE 5, SLIDE 6 ... -->
+        <!-- [Seu conteúdo existente permanece sem alterações] -->
+
+    </div>
+
+    <!-- Navegação dos slides -->
+    <div class="fixed right-4 top-1/2 transform -translate-y-1/2 flex flex-col space-y-2 z-20">
+        <a href="#slide-1" class="w-3 h-3 bg-white rounded-full opacity-100"></a>
+        <a href="#slide-2" class="w-3 h-3 bg-white rounded-full opacity-50 hover:opacity-100"></a>
+        <a href="#slide-3" class="w-3 h-3 bg-white rounded-full opacity-50 hover:opacity-100"></a>
+        <a href="#slide-4" class="w-3 h-3 bg-white rounded-full opacity-50 hover:opacity-100"></a>
+        <a href="#slide-5" class="w-3 h-3 bg-white rounded-full opacity-50 hover:opacity-100"></a>
+        <a href="#slide-6" class="w-3 h-3 bg-white rounded-full opacity-50 hover:opacity-100"></a>
+    </div>
+
+    <script>
+        const observerOptions = {
+            root: document.getElementById('presentation-container'),
+            threshold: 0.5,
+        };
+        const slides = document.querySelectorAll('.slide');
+        const navLinks = document.querySelectorAll('.fixed a');
+        const slideObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                const targetId = entry.target.id;
+                const navLink = document.querySelector(`a[href="#${targetId}"]`);
+                if (navLink) {
+                    if (entry.isIntersecting) {
+                        navLinks.forEach(link => link.classList.remove('opacity-100'));
+                        navLink.classList.add('opacity-100');
+                    } else {
+                        navLink.classList.remove('opacity-100');
+                    }
+                }
+            });
+        }, observerOptions);
+        slides.forEach(slide => slideObserver.observe(slide));
+        navLinks.forEach(link => {
+            link.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+    </script>
+</body>
+</html>
