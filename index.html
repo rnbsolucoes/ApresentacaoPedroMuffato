@@ -1,333 +1,163 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pedro Muffato - Revisão Tributária Estratégica</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        html { font-family: 'Inter', sans-serif; }
-        .slide {
-            width: 100vw;
-            height: 100vh;
-            scroll-snap-align: start;
-            flex-shrink: 0;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            padding: 2rem;
-            position: relative;
-        }
-        #presentation-container {
-            scroll-snap-type: y mandatory;
-            overflow-y: scroll;
-            height: 100vh;
-        }
-        #presentation-container::-webkit-scrollbar { display: none; }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Revisão Tributária - Pedro Muffato Ltda</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      margin: 0;
+      background-color: #f9f9f9;
+      color: #333;
+    }
 
-        /* Novo estilo do Slide 1 com imagem de fundo */
-        #slide-1 {
-            position: relative;
-            overflow: hidden;
-        }
-        #slide-1 img.bg-cover {
-            position: absolute;
-            inset: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            z-index: 0;
-        }
-        #slide-1 .overlay {
-            position: absolute;
-            inset: 0;
-            background-color: rgba(30, 58, 138, 0.7); /* azul escuro translúcido */
-            z-index: 1;
-        }
-        #slide-1 header {
-            position: relative;
-            z-index: 2;
-        }
-    </style>
+    section {
+      padding: 60px 10%;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    header {
+      background-image: url('https://updnnpoxaempjebvhruj.supabase.co/storage/v1/object/public/Capas-Portfolio-RNB/BG_RH.png');
+      background-size: cover;
+      background-position: center;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: white;
+    }
+
+    header h1 {
+      font-size: 2.8rem;
+      font-weight: bold;
+      background: rgba(0, 0, 0, 0.6);
+      padding: 20px 40px;
+      border-radius: 10px;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      margin-top: 15px;
+      background: rgba(0, 0, 0, 0.4);
+      padding: 10px 25px;
+      border-radius: 8px;
+    }
+
+    h2 {
+      color: #004aad;
+      border-left: 5px solid #004aad;
+      padding-left: 10px;
+      margin-bottom: 20px;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    ul li::before {
+      content: '✔';
+      color: #004aad;
+      margin-right: 10px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 40px;
+      background-color: #004aad;
+      color: white;
+    }
+  </style>
 </head>
+<body>
+  <header>
+    <h1>Revisão Tributária Estadual – Pedro Muffato Ltda</h1>
+    <p>Resultados e oportunidades de otimização fiscal | Outubro de 2025</p>
+  </header>
 
-<body class="bg-light text-dark">
-    <div id="presentation-container">
+  <section>
+    <h2>Contexto e Escopo</h2>
+    <ul>
+      <li>Período analisado: 01/07/2025 a 22/09/2025</li>
+      <li>Base: EFD ICMS/IPI (julho e agosto de 2025)</li>
+      <li>Filial: Assis – SP</li>
+      <li>Objetivo: garantir correta aplicação da legislação e competitividade tributária</li>
+    </ul>
+  </section>
 
-        <!-- SLIDE 1: atualizado com imagem de fundo -->
-        <section id="slide-1" class="slide text-light">
-            <img src="https://updnnpoxaempjebvhruj.supabase.co/storage/v1/object/public/Capas-Portfolio-RNB/BG_RH.png"
-                 alt="Fundo RH" class="bg-cover" />
-            <div class="overlay"></div>
+  <section>
+    <h2>Principais Conclusões</h2>
+    <ul>
+      <li>ICMS-ST indevido em transferências entre filiais (mesmo CNPJ)</li>
+      <li>Aplicação correta: ICMS-ST apenas em saídas internas a varejistas</li>
+      <li>Redução de base de cálculo válida apenas para ICMS próprio</li>
+      <li>Necessidade de ajustes no CFOP/CST em notas de entrada e saída</li>
+    </ul>
+  </section>
 
-            <header class="text-center px-4 py-20">
-                <h1 class="text-5xl md:text-7xl font-extrabold mb-4 text-white drop-shadow-lg">
-                    Revisão Tributária Estratégica
-                </h1>
-                <p class="text-2xl md:text-3xl font-light text-white whitespace-nowrap mb-10 drop-shadow">
-                    Competitividade e Compliance Fiscal no ICMS-ST (SP)
-                </p>
-                <div class="mt-8 pt-8 border-t border-blue-300">
-                    <p class="text-lg font-medium text-white">Pedro Muffato Ltda. | Período: Julho a Setembro/2025</p>
-                </div>
-            </header>
-        </section>
-<!-- SLIDE 2: OPORTUNIDADE PRINCIPAL - ICMS NA TRANSFERÊNCIA (Infográfico Legal) -->
-        <section id="slide-2" class="slide bg-light text-dark">
-            <h2 class="text-3xl md:text-5xl font-bold secondary-color mb-12">
-                Oportunidade 1: Não Incidência de ICMS-ST em Transferências
-            </h2>
+  <section>
+    <h2>Legislação e Fundamentação</h2>
+    <ul>
+      <li>Tema 1099 / ADC 49 – Não incidência ICMS entre matriz e filial</li>
+      <li>LC 204/2023 – Inclusão do §4º no art. 12 da LC 87/96</li>
+      <li>Convênio 142/2018 – Cláusula Nona, II</li>
+      <li>RICMS/SP art. 264 – Saídas entre substitutos não sujeitas a ST</li>
+    </ul>
+  </section>
 
-            <div class="flex flex-col lg:flex-row justify-center items-center w-full max-w-6xl space-y-8 lg:space-y-0 lg:space-x-12">
-                
-                <!-- Coluna 1: ANTES (Prática Atual) -->
-                <div class="p-8 rounded-xl shadow-2xl border-4 border-red-500/50 bg-white w-full lg:w-1/2">
-                    <div class="flex items-center space-x-4 mb-4">
-                        <span class="text-3xl font-extrabold text-red-600">ANTES</span>
-                        <svg class="w-8 h-8 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                    </div>
-                    <p class="text-lg font-semibold mb-3">Prática Identificada (Jul/25 - Set/25):</p>
-                    <ul class="list-disc list-inside space-y-2 text-gray-700">
-                        <li>Transferência (PR → SP) com Cálculo de ICMS/ICMS-ST.</li>
-                        <li>**Impacto:** Aumenta indevidamente a base de cálculo para o ICMS-ST na venda em SP.</li>
-                    </ul>
-                </div>
+  <section>
+    <h2>Oportunidades Identificadas</h2>
+    <ul>
+      <li>Retificação de CFOP incorretos (2.409, 2.152)</li>
+      <li>Aproveitamento de créditos extemporâneos de ICMS</li>
+      <li>Correção de CST com redução indevida de base de cálculo</li>
+      <li>Revisão de cadastro de produtos e clientes</li>
+    </ul>
+  </section>
 
-                <!-- Ícone de seta -->
-                <div class="text-center lg:py-0 py-4">
-                    <svg class="w-12 h-12 text-blue-600 animate-pulse hidden lg:block" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
-                    <svg class="w-12 h-12 text-blue-600 animate-pulse lg:hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 17l4 4m0 0l4-4m-4 4V3"></path></svg>
-                </div>
-                
-                <!-- Coluna 2: DEPOIS (Regra Correta) -->
-                <div class="p-8 rounded-xl shadow-2xl border-4 border-green-500/50 bg-white w-full lg:w-1/2">
-                    <div class="flex items-center space-x-4 mb-4">
-                        <span class="text-3xl font-extrabold text-green-600">DEPOIS</span>
-                        <svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.276a1.12 1.12 0 011.284-.695c.783.175 1.258.918 1.258 1.933a1.12 1.12 0 01-1.258 1.933M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                    </div>
-                    <p class="text-lg font-semibold mb-3">Conclusão Legal (Tese 1099/ADC 49):</p>
-                    <ul class="list-disc list-inside space-y-2 text-gray-700">
-                        <li>Transferência entre estabelecimentos do mesmo titular **NÃO É FATO GERADOR** de ICMS.</li>
-                        <li>ICMS-ST não se aplica em transferências interestaduais (exceto para varejista).</li>
-                    </ul>
-                    <p class="text-base mt-4 italic font-medium text-blue-600">
-                        Ajuste Imediato: CFOP 6.152/2.152 e nota fiscal sem destaque de débito.
-                    </p>
-                </div>
+  <section>
+    <h2>Impactos Financeiros</h2>
+    <ul>
+      <li>Redução de carga tributária nas transferências</li>
+      <li>Melhoria da margem comercial</li>
+      <li>Mitigação de riscos fiscais e autuações</li>
+    </ul>
+  </section>
 
-            </div>
-        </section>
+  <section>
+    <h2>Recomendações Estratégicas</h2>
+    <ul>
+      <li>Padronizar CFOP e CST conforme legislação vigente</li>
+      <li>Revisar NCM, CEST e descrições técnicas no cadastro</li>
+      <li>Automatizar validações fiscais via ERP / BI</li>
+      <li>Criar política interna de revisão tributária periódica</li>
+    </ul>
+  </section>
 
-        <!-- SLIDE 3: INFOGRÁFICO DE IMPACTO FINANCEIRO E OPORTUNIDADES -->
-        <section id="slide-3" class="slide primary-color text-light">
-            <h2 class="text-3xl md:text-5xl font-bold text-white mb-12 text-center">
-                Impacto Financeiro e Oportunidades de Recuperação
-            </h2>
+  <section>
+    <h2>Próximos Passos</h2>
+    <ol>
+      <li>Retificação de EFD-ICMS/IPI (jul/ago/25)</li>
+      <li>Ajuste dos cadastros fiscais e CFOP</li>
+      <li>Parametrização das regras fiscais no sistema</li>
+      <li>Monitoramento de indicadores fiscais (via Power BI)</li>
+    </ol>
+  </section>
 
-            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 w-full max-w-6xl">
-                
-                <!-- CARD 1: Crédito Extemporâneo (Entradas) -->
-                <div class="p-6 rounded-xl shadow-lg border-b-4 border-yellow-500 bg-white">
-                    <div class="flex items-center space-x-3 mb-4">
-                        <svg class="w-8 h-8 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6H4m12 10a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6h2"></path></svg>
-                        <h3 class="text-xl font-bold text-dark">1. Escrituração Incorreta (Entrada)</h3>
-                    </div>
-                    <p class="text-sm text-gray-600 mb-4">Erros em CFOPs e CSTs na entrada (2.409, CST 20/60) que geraram crédito de ICMS a menor.</p>
-                    <div class="mt-4">
-                        <p class="text-2xl font-extrabold text-yellow-600">Oportunidade de Crédito</p>
-                        <p class="text-lg text-gray-800">Possível de recuperação via **Crédito Extemporâneo**.</p>
-                    </div>
-                </div>
+  <section>
+    <h2>Conclusão</h2>
+    <blockquote>
+      “A adequação tributária é essencial para garantir a competitividade, reduzir riscos e aumentar a eficiência operacional da Pedro Muffato Ltda.”
+    </blockquote>
+  </section>
 
-                <!-- CARD 2: ICMS-ST Calculado a Menor (Saídas) -->
-                <div class="p-6 rounded-xl shadow-lg border-b-4 border-red-500 bg-white">
-                    <div class="flex items-center space-x-3 mb-4">
-                        <svg class="w-8 h-8 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-3.1 0-5 2.8-5 6h10c0-3.2-1.9-6-5-6zM12 4v4m0 8v4"></path></svg>
-                        <h3 class="text-xl font-bold text-dark">2. Risco na Base do ICMS-ST (Saída)</h3>
-                    </div>
-                    <p class="text-sm text-gray-600 mb-4">Utilização indevida da Redução de Base de Cálculo (Primavera Fiscal) no cálculo do ICMS-ST devido.</p>
-                    <p class="text-xs text-gray-500">Ex: Transação de R$ 35 mil (Ago/25) com recolhimento a menor.</p>
-                    <div class="mt-4">
-                        <p class="text-2xl font-extrabold text-red-600">Risco de Autuação</p>
-                        <p class="text-lg text-gray-800">Necessidade de retificação e recolhimento imediato da diferença.</p>
-                    </div>
-                </div>
-
-                <!-- CARD 3: Custos e Competitividade -->
-                <div class="p-6 rounded-xl shadow-lg border-b-4 border-green-500 bg-white">
-                    <div class="flex items-center space-x-3 mb-4">
-                        <svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h.01M7 3h.01M17 7h.01M17 3h.01M7 17h.01M7 21h.01M17 17h.01M17 21h.01M12 12V3m0 9v9m0-9h9m-9 0H3"></path></svg>
-                        <h3 class="text-xl font-bold text-dark">3. Formação de Preço (Custo)</h3>
-                    </div>
-                    <p class="text-sm text-gray-600 mb-4">O ICMS-ST indevido na entrada aumenta o custo do produto em SP, comprometendo a margem e a competitividade.</p>
-                    <div class="mt-4">
-                        <p class="text-2xl font-extrabold text-green-600">Alívio de Custo</p>
-                        <p class="text-lg text-gray-800">A correção alinha o custo ao mercado, permitindo preços de venda mais competitivos.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- SLIDE 4: INFOGRÁFICO DE COMPLIANCE E RISCOS (CHECKLIST) -->
-        <section id="slide-4" class="slide primary-color text-light">
-            <h2 class="text-3xl md:text-5xl font-bold text-white mb-12 text-center">
-                Ações de Compliance e Redução de Risco
-            </h2>
-            
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 w-full max-w-6xl">
-                
-                <!-- Item 1: Cadastro de Produtos -->
-                <div class="p-6 rounded-xl shadow-xl bg-blue-900/50 hover:bg-blue-900/70 transition duration-300">
-                    <div class="flex items-center space-x-3 mb-3">
-                        <svg class="w-8 h-8 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10m0 0h16m-4 0v-2m-4-4h4m-8-2h4m4 0v4m-4-4V7a2 2 0 00-2-2H6a2 2 0 00-2 2v4"></path></svg>
-                        <h3 class="text-xl font-semibold">1. Cadastro de Produto</h3>
-                    </div>
-                    <ul class="text-sm space-y-2 opacity-90">
-                        <li>**Revisão Completa (NCM, CEST, GTIN):** Padronizar classificação fiscal para eliminar divergências entre fornecedores (Risco de ICMS-ST).</li>
-                        <li>**Aprimoramento da Descrição:** Incluir "descrição técnica" (ex: congelado, parboilizado) para garantir a correta aplicação da CAT 68 (CEST).</li>
-                    </ul>
-                </div>
-
-                <!-- Item 2: Cadastro de Clientes -->
-                <div class="p-6 rounded-xl shadow-xl bg-blue-900/50 hover:bg-blue-900/70 transition duration-300">
-                    <div class="flex items-center space-x-3 mb-3">
-                        <svg class="w-8 h-8 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H9a3 3 0 01-3-3V7a2 2 0 012-2h8a2 2 0 012 2v11a3 3 0 01-3 3zm-2-7h-2"></path></svg>
-                        <h3 class="text-xl font-semibold">2. Cadastro de Clientes</h3>
-                    </div>
-                    <ul class="text-sm space-y-2 opacity-90">
-                        <li>**Regime Tributário (Simples Nacional):** Campo obrigatório para restringir o benefício da Redução de Base de Cálculo (Primavera Fiscal).</li>
-                        <li>**Destinação da Mercadoria:** Classificar o cliente (Consumidor Final, Revenda, Industrialização) para determinar a Atividade Preponderante (CAT 07/2017).</li>
-                    </ul>
-                </div>
-
-                <!-- Item 3: Programa "Nos Conformes" -->
-                <div class="p-6 rounded-xl shadow-xl bg-blue-900/50 hover:bg-blue-900/70 transition duration-300">
-                    <div class="flex items-center space-x-3 mb-3">
-                        <svg class="w-8 h-8 text-pink-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.276a1.12 1.12 0 011.284-.695c.783.175 1.258.918 1.258 1.933a1.12 1.12 0 01-1.258 1.933M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                        <h3 class="text-xl font-semibold">3. Programa "Nos Conformes"</h3>
-                    </div>
-                    <p class="text-sm mb-2 opacity-90">
-                        Ajustar a apuração do ICMS e corrigir os cadastros é essencial para melhorar o perfil do contribuinte e incentivar a autorregularização.
-                    </p>
-                    <div class="mt-4 pt-2 border-t border-blue-400">
-                        <p class="text-xs italic opacity-70">Objetivo: Construir um ambiente de confiança recíproca com o Fisco Paulista.</p>
-                    </div>
-                </div>
-
-            </div>
-        </section>
-
-        <!-- SLIDE 5: RESUMO E PRÓXIMOS PASSOS (Roadmap) -->
-        <section id="slide-5" class="slide bg-light text-dark">
-            <h2 class="text-3xl md:text-5xl font-bold secondary-color mb-12 text-center">
-                Roadmap de Ação Imediata
-            </h2>
-
-            <!-- Timeline/Progress Bar style infographic -->
-            <div class="relative w-full max-w-4xl pt-8 pb-12">
-                
-                <div class="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-gray-200 hidden md:block"></div>
-
-                <!-- Item 1 -->
-                <div class="flex items-center mb-8 w-full md:w-1/2 md:pr-10">
-                    <div class="hidden md:block w-full"></div>
-                    <div class="z-10 flex items-center bg-blue-600 rounded-full h-10 w-10 text-white font-bold justify-center flex-shrink-0">1</div>
-                    <div class="flex-grow md:pl-8">
-                        <h3 class="font-bold text-xl secondary-color">Retificação EFD (Crédito)</h3>
-                        <p class="text-gray-600 text-sm">Escriturar o **Crédito Extemporâneo** das entradas incorretas (CFOP/CST) identificadas no período 01/07 a 22/09/25.</p>
-                    </div>
-                </div>
-
-                <!-- Item 2 -->
-                <div class="flex items-center mb-8 w-full md:w-1/2 md:pl-10 md:ml-auto md:flex-row-reverse">
-                    <div class="flex-grow md:pr-8 text-right md:text-left">
-                        <h3 class="font-bold text-xl secondary-color">Ajuste de Preço e Custo</h3>
-                        <p class="text-gray-600 text-sm">Revisar o cálculo de custo/preço de venda, removendo o ICMS-ST indevido nas transferências (PR->SP).</p>
-                    </div>
-                    <div class="z-10 flex items-center bg-blue-600 rounded-full h-10 w-10 text-white font-bold justify-center flex-shrink-0">2</div>
-                </div>
-
-                <!-- Item 3 -->
-                <div class="flex items-center mb-8 w-full md:w-1/2 md:pr-10">
-                    <div class="hidden md:block w-full"></div>
-                    <div class="z-10 flex items-center bg-blue-600 rounded-full h-10 w-10 text-white font-bold justify-center flex-shrink-0">3</div>
-                    <div class="flex-grow md:pl-8">
-                        <h3 class="font-bold text-xl secondary-color">Saneamento Cadastral</h3>
-                        <p class="text-gray-600 text-sm">Implementar campos para **Regime Tributário** (Clientes) e **Descrição Técnica** (Produtos) para mitigar riscos de autuação.</p>
-                    </div>
-                </div>
-            </div>
-
-            <p class="text-lg font-medium mt-6 p-4 bg-yellow-100 rounded-lg border-l-4 border-yellow-500 max-w-4xl text-center">
-                **Meta:** Garantir conformidade total, otimizar a carga tributária real e maximizar a margem competitiva.
-            </p>
-        </section>
-        
-        <!-- SLIDE 6: AGRADECIMENTO E Q&A -->
-        <section id="slide-6" class="slide primary-color text-light">
-            <header class="text-center">
-                <h2 class="text-5xl md:text-7xl font-extrabold mb-4">
-                    Próximos Passos & Q&A
-                </h2>
-                <p class="text-2xl md:text-3xl font-light opacity-80 mb-10">
-                    Sua decisão em compliance e eficiência tributária
-                </p>
-                <div class="mt-8 pt-8 border-t border-blue-400">
-                    <p class="text-lg font-medium">Obrigado.</p>
-                </div>
-            </header>
-        </section>
-
-    </div>
-
-    <!-- Navegação e Indicador de Slide (Opcional, mas útil) -->
-    <div class="fixed right-4 top-1/2 transform -translate-y-1/2 flex flex-col space-y-2 z-20">
-        <a href="#slide-1" class="w-3 h-3 bg-white rounded-full opacity-50 hover:opacity-100 transition-opacity" title="Introdução"></a>
-        <a href="#slide-2" class="w-3 h-3 bg-white rounded-full opacity-50 hover:opacity-100 transition-opacity" title="Oportunidade 1"></a>
-        <a href="#slide-3" class="w-3 h-3 bg-white rounded-full opacity-50 hover:opacity-100 transition-opacity" title="Impacto Financeiro"></a>
-        <a href="#slide-4" class="w-3 h-3 bg-white rounded-full opacity-50 hover:opacity-100 transition-opacity" title="Riscos e Compliance"></a>
-        <a href="#slide-5" class="w-3 h-3 bg-white rounded-full opacity-50 hover:opacity-100 transition-opacity" title="Roadmap"></a>
-        <a href="#slide-6" class="w-3 h-3 bg-white rounded-full opacity-50 hover:opacity-100 transition-opacity" title="Q&A"></a>
-    </div>
-
-    <script>
-        // Script para adicionar a classe 'active' ao slide visível (para um indicador de navegação mais dinâmico, se necessário)
-        const observerOptions = {
-            root: document.getElementById('presentation-container'),
-            threshold: 0.5, // 50% do slide visível
-        };
-
-        const slides = document.querySelectorAll('.slide');
-        const navLinks = document.querySelectorAll('.fixed a');
-
-        const slideObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                const targetId = entry.target.id;
-                const navLink = document.querySelector(`a[href="#${targetId}"]`);
-
-                if (navLink) {
-                    if (entry.isIntersecting) {
-                        navLinks.forEach(link => link.classList.remove('opacity-100'));
-                        navLink.classList.add('opacity-100');
-                    } else {
-                        navLink.classList.remove('opacity-100');
-                    }
-                }
-            });
-        }, observerOptions);
-
-        slides.forEach(slide => slideObserver.observe(slide));
-
-        // Rolar suavemente ao clicar nos links de navegação
-        navLinks.forEach(link => {
-            link.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-    </script>
+  <footer>
+    <p>Rede Assessoria Contábil Ltda. | CRC SP-045689/O-8</p>
+    <p>Pedro Muffato Ltda | Outubro de 2025</p>
+  </footer>
 </body>
 </html>
